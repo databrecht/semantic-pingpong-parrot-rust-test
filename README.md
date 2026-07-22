@@ -1,18 +1,16 @@
-# Semantic Ping-Pong Tennis Test
+# Semantic Ping-Pong Parrot Test
 
-A small, behavior-preserving refactoring exercise for evaluating semantic ping-pong. The target is [`src/TennisGame1.ts`](src/TennisGame1.ts): improve how the tennis-scoring concepts are represented without changing its public API or observable behavior.
+A small behavior-preserving refactoring exercise for evaluating semantic ping-pong. Improve the semantic form of [`src/lib.rs`](src/lib.rs) without changing its observable behavior.
 
 ## Run
 
 ```bash
-npm install --ignore-scripts --no-audit --no-fund --no-package-lock
-npm test -- --runInBand
+cargo nextest run
+cargo check
 ```
-
-## Behavioral constraint
-
-Do not fix the deliberately hard-coded player-name behavior. Literal `"player1"` scores for player one; every other input scores for player two. Existing score strings must remain unchanged.
 
 ## Attribution
 
-Extracted from [Emily Bache's Tennis Refactoring Kata](https://github.com/emilybache/Tennis-Refactoring-Kata), `typescript-jest/` implementation. The original project is distributed under the MIT License; see [`LICENSE`](LICENSE).
+Extracted from the [`Rust/`](https://github.com/emilybache/Parrot-Refactoring-Kata/tree/main/Rust) implementation of [Emily Bache's Parrot Refactoring Kata](https://github.com/emilybache/Parrot-Refactoring-Kata), upstream commit [`0587938`](https://github.com/emilybache/Parrot-Refactoring-Kata/commit/0587938b589f34ee748aa21ec44b8153cfb538d7).
+
+The original project is distributed under the MIT License; see [`LICENSE`](LICENSE).
